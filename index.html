@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Café Aurelia - Coffee, Food and Moments">
-
     <title>Café Aurelia</title>
 
     <link rel="stylesheet" href="style.css">
@@ -20,24 +18,18 @@
 
         <nav class="navbar">
 
-            <a href="#home" class="logo">
-                Café Aurelia
-            </a>
+            <a href="#" class="logo">Café Aurelia</a>
 
-            <button
-                class="menu-toggle"
-                id="menuToggle"
-                aria-label="Open navigation"
-                aria-expanded="false"
-            >
+            <!-- HAMBURGER - RIGHT SIDE -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
 
+            <!-- NAVIGATION -->
             <div class="nav-links" id="navLinks">
 
-                <a href="#home">Home</a>
                 <a href="#about">About</a>
                 <a href="#menu">Menu</a>
                 <a href="#why">Why Us</a>
@@ -54,17 +46,14 @@
 
         <!-- HERO -->
 
-        <section class="hero" id="home">
+        <section class="hero">
 
             <div class="hero-content">
 
-                <p class="tagline">
-                    COFFEE • FOOD • MOMENTS
-                </p>
+                <p class="tagline">COFFEE • FOOD • MOMENTS</p>
 
                 <h1>
-                    Where Every Cup
-                    <br>
+                    Where Every Cup<br>
                     Tells a Story.
                 </h1>
 
@@ -84,7 +73,7 @@
 
         <!-- ABOUT -->
 
-        <section class="about" id="about">
+        <section id="about" class="about">
 
             <div class="about-image">
 
@@ -97,9 +86,7 @@
 
             <div class="about-content">
 
-                <p class="section-label">
-                    OUR STORY
-                </p>
+                <p class="section-label">OUR STORY</p>
 
                 <h2>
                     A little place for big moments.
@@ -111,9 +98,9 @@
                 </p>
 
                 <p>
-                    Whether you're catching up with friends,
-                    enjoying some quiet time or simply craving
-                    a great cup of coffee, Aurelia is made for you.
+                    Whether you're catching up with friends, enjoying
+                    some quiet time or simply craving a great cup of
+                    coffee, Aurelia is made for you.
                 </p>
 
             </div>
@@ -123,24 +110,23 @@
 
         <!-- MENU -->
 
-        <section class="menu" id="menu">
+        <section id="menu" class="menu">
 
             <div class="section-heading">
 
-                <p class="section-label">
-                    OUR MENU
-                </p>
+                <p class="section-label">OUR MENU</p>
 
-                <h2>
-                    Customer Favorites
-                </h2>
+                <h2>Customer Favorites</h2>
 
             </div>
 
 
             <div class="menu-container">
 
-                <article class="menu-card">
+
+                <!-- CAPPUCCINO -->
+
+                <div class="menu-card">
 
                     <img
                         src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=85"
@@ -149,28 +135,24 @@
 
                     <div class="card-content">
 
-                        <span class="category">
-                            COFFEE
-                        </span>
+                        <p class="item-type">COFFEE</p>
 
-                        <h3>
-                            Classic Cappuccino
-                        </h3>
+                        <h3>Classic Cappuccino</h3>
 
                         <p>
                             Rich espresso with creamy steamed milk.
                         </p>
 
-                        <strong>
-                            ₹180
-                        </strong>
+                        <strong>₹180</strong>
 
                     </div>
 
-                </article>
+                </div>
 
 
-                <article class="menu-card">
+                <!-- HAZELNUT LATTE -->
+
+                <div class="menu-card">
 
                     <img
                         src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=85"
@@ -179,28 +161,24 @@
 
                     <div class="card-content">
 
-                        <span class="category">
-                            COFFEE
-                        </span>
+                        <p class="item-type">COFFEE</p>
 
-                        <h3>
-                            Hazelnut Latte
-                        </h3>
+                        <h3>Hazelnut Latte</h3>
 
                         <p>
                             Smooth latte with a delicious hazelnut touch.
                         </p>
 
-                        <strong>
-                            ₹210
-                        </strong>
+                        <strong>₹210</strong>
 
                     </div>
 
-                </article>
+                </div>
 
 
-                <article class="menu-card">
+                <!-- CHOCOLATE CAKE -->
+
+                <div class="menu-card">
 
                     <img
                         src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=85"
@@ -209,25 +187,19 @@
 
                     <div class="card-content">
 
-                        <span class="category">
-                            DESSERT
-                        </span>
+                        <p class="item-type">DESSERT</p>
 
-                        <h3>
-                            Chocolate Cake
-                        </h3>
+                        <h3>Chocolate Cake</h3>
 
                         <p>
                             Soft chocolate cake served fresh.
                         </p>
 
-                        <strong>
-                            ₹160
-                        </strong>
+                        <strong>₹160</strong>
 
                     </div>
 
-                </article>
+                </div>
 
             </div>
 
@@ -236,32 +208,20 @@
 
         <!-- WHY US -->
 
-        <section class="why-us" id="why">
+        <section id="why" class="why-us">
 
-            <div class="section-heading">
+            <p class="section-label">WHY AURELIA</p>
 
-                <p class="section-label">
-                    WHY AURELIA
-                </p>
-
-                <h2>
-                    Made with care.
-                </h2>
-
-            </div>
+            <h2>Made with care.</h2>
 
 
             <div class="features">
 
                 <div class="feature">
 
-                    <div class="feature-number">
-                        01
-                    </div>
+                    <div class="feature-icon">01</div>
 
-                    <h3>
-                        Fresh Coffee
-                    </h3>
+                    <h3>Fresh Coffee</h3>
 
                     <p>
                         Freshly brewed for every customer.
@@ -272,13 +232,9 @@
 
                 <div class="feature">
 
-                    <div class="feature-number">
-                        02
-                    </div>
+                    <div class="feature-icon">02</div>
 
-                    <h3>
-                        Fresh Food
-                    </h3>
+                    <h3>Fresh Food</h3>
 
                     <p>
                         Prepared with quality ingredients.
@@ -289,13 +245,9 @@
 
                 <div class="feature">
 
-                    <div class="feature-number">
-                        03
-                    </div>
+                    <div class="feature-icon">03</div>
 
-                    <h3>
-                        Cozy Space
-                    </h3>
+                    <h3>Cozy Space</h3>
 
                     <p>
                         A comfortable place to relax and connect.
@@ -310,46 +262,35 @@
 
         <!-- CONTACT -->
 
-        <section class="contact" id="contact">
+        <section id="contact" class="contact">
 
-            <p class="section-label">
-                VISIT US
+            <p class="section-label">VISIT US</p>
+
+            <h2>Let's grab a coffee.</h2>
+
+            <p class="contact-info">
+                Main Street, Maharashtra
+                <br>
+                Mon–Sun: 9:00 AM – 10:00 PM
             </p>
 
-            <h2>
-                Let's grab a coffee.
-            </h2>
+            <div class="contact-buttons">
 
-            <div class="contact-details">
+                <a
+                    href="mailto:hello@cafeaurelia.com"
+                    class="button"
+                >
+                    Email Us
+                </a>
 
-                <p>
-                    Main Street, Maharashtra
-                </p>
-
-                <p>
-                    Mon–Sun: 9:00 AM – 10:00 PM
-                </p>
-
-                <p>
-                    <a href="mailto:yourname@gmail.com">
-                        yourname@gmail.com
-                    </a>
-                </p>
-
-                <p>
-                    <a href="tel:+919999999999">
-                        +91 99999 99999
-                    </a>
-                </p>
+                <a
+                    href="tel:+910000000000"
+                    class="button button-outline"
+                >
+                    Call Us
+                </a>
 
             </div>
-
-            <a
-                href="mailto:yourname@gmail.com"
-                class="button"
-            >
-                Contact Us
-            </a>
 
         </section>
 
@@ -358,7 +299,7 @@
 
     <!-- FOOTER -->
 
-    <footer class="footer">
+    <footer>
 
         <p>
             © 2026 Café Aurelia. All rights reserved.
