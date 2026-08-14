@@ -17,7 +17,7 @@ body {
 
 
 /* =========================
-   NAVIGATION
+   HEADER
 ========================= */
 
 header {
@@ -30,18 +30,26 @@ header {
 
 nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    position: relative;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .logo {
     color: #f5d6a6;
     font-size: 24px;
+    font-weight: bold;
 }
+
+
+/* =========================
+   DESKTOP NAVIGATION
+========================= */
 
 .nav-links {
     display: flex;
+    align-items: center;
     gap: 28px;
 }
 
@@ -49,20 +57,31 @@ nav {
     color: white;
     text-decoration: none;
     font-size: 14px;
-    transition: 0.3s;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
     color: #f5d6a6;
 }
 
+
+/* =========================
+   HAMBURGER BUTTON
+========================= */
+
 .menu-toggle {
     display: none;
-    background: transparent;
+
+    background: none;
     border: none;
+
     color: white;
-    font-size: 28px;
+
+    font-size: 30px;
+
     cursor: pointer;
+
+    padding: 5px;
 }
 
 
@@ -84,9 +103,7 @@ nav {
             rgba(43, 33, 27, 0.72)
         ),
         url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1800&q=85")
-        center/cover;
-
-    background-attachment: fixed;
+        center / cover no-repeat;
 }
 
 .hero-content {
@@ -108,21 +125,32 @@ nav {
 
 .hero h2 {
     color: white;
+
     font-size: clamp(45px, 8vw, 80px);
+
     line-height: 1.05;
+
     margin-bottom: 25px;
 }
 
 .hero-description {
-    color: #eee;
+    color: #eeeeee;
+
     max-width: 520px;
+
     margin-bottom: 30px;
 }
+
+
+/* =========================
+   BUTTON
+========================= */
 
 .button {
     display: inline-block;
 
     background: #a66a3f;
+
     color: white;
 
     padding: 13px 25px;
@@ -131,11 +159,12 @@ nav {
 
     border-radius: 30px;
 
-    transition: 0.3s;
+    transition: all 0.3s ease;
 }
 
 .button:hover {
     background: #7e4d2c;
+
     transform: translateY(-3px);
 }
 
@@ -160,11 +189,13 @@ section h2 {
 
 .about {
     max-width: 850px;
+
     margin: auto;
+
     text-align: center;
 }
 
-.about p:last-child {
+.about > p:last-child {
     color: #6b5b50;
 }
 
@@ -175,17 +206,20 @@ section h2 {
 
 .menu {
     background: #efe5d8;
+
     text-align: center;
 }
 
 .menu-container {
+    max-width: 1200px;
+
+    margin: 45px auto 0;
+
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
 
     gap: 28px;
-
-    margin-top: 45px;
 }
 
 .menu-card {
@@ -200,7 +234,8 @@ section h2 {
     box-shadow:
         0 8px 25px rgba(0, 0, 0, 0.08);
 
-    transition: 0.35s;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
 }
 
 .menu-card:hover {
@@ -210,64 +245,59 @@ section h2 {
         0 18px 35px rgba(0, 0, 0, 0.15);
 }
 
-.image-container {
-    height: 230px;
-    overflow: hidden;
-}
-
 .menu-card img {
+    display: block;
+
     width: 100%;
-    height: 100%;
+
+    height: 230px;
 
     object-fit: cover;
 
-    transition: 0.5s;
+    transition: transform 0.5s ease;
 }
 
 .menu-card:hover img {
-    transform: scale(1.07);
+    transform: scale(1.06);
 }
 
-.card-content {
+.menu-card-content {
     padding: 25px;
 }
 
-.card-content h3 {
-    margin-bottom: 10px;
-    font-size: 21px;
+.menu-category {
+    color: #a66a3f;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
 }
 
-.card-content p {
+.menu-card h3 {
+    font-size: 21px;
+
+    margin-bottom: 10px;
+}
+
+.menu-card-content > p:not(.menu-category) {
     color: #76675e;
+
     margin-bottom: 15px;
 }
 
-.card-content strong {
+.menu-card strong {
     color: #a66a3f;
+
     font-size: 20px;
-}
-
-.popular {
-    display: inline-block;
-
-    background: #f5d6a6;
-    color: #5b3825;
-
-    font-size: 10px;
-    font-weight: bold;
-
-    padding: 5px 9px;
-
-    border-radius: 20px;
-
-    letter-spacing: 1px;
-
-    margin-bottom: 10px;
 }
 
 
 /* =========================
-   WHY US
+   WHY AURELIA
 ========================= */
 
 .why-us {
@@ -275,27 +305,30 @@ section h2 {
 }
 
 .features {
+    max-width: 1100px;
+
+    margin: 45px auto 0;
+
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
 
     gap: 30px;
-
-    margin-top: 45px;
 }
 
 .feature {
     padding: 30px;
 
-    transition: 0.3s;
+    transition: transform 0.3s ease;
 }
 
 .feature:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
 }
 
 .feature-icon {
-    font-size: 38px;
+    font-size: 40px;
+
     margin-bottom: 10px;
 }
 
@@ -324,9 +357,10 @@ section h2 {
     color: #f5d6a6;
 }
 
-.contact p {
+.contact > p:not(.section-label) {
+    color: #dddddd;
+
     margin-bottom: 30px;
-    color: #ddd;
 }
 
 
@@ -337,62 +371,13 @@ section h2 {
 footer {
     background: #1d1612;
 
-    color: #aaa;
+    color: #aaaaaa;
 
     text-align: center;
 
-    padding: 30px 7%;
+    padding: 25px 7%;
 
     font-size: 13px;
-}
-
-.footer-content h3 {
-    color: #f5d6a6;
-    margin-bottom: 5px;
-}
-
-.footer-content p {
-    margin-bottom: 5px;
-}
-
-.copyright {
-    margin-top: 15px;
-    color: #777;
-}
-
-
-/* =========================
-   SCROLL ANIMATION
-========================= */
-
-.reveal {
-    opacity: 0;
-
-    transform: translateY(30px);
-
-    transition:
-        opacity 0.8s ease,
-        transform 0.8s ease;
-}
-
-.reveal.show {
-    opacity: 1;
-
-    transform: translateY(0);
-}
-
-
-/* =========================
-   TABLET
-========================= */
-
-@media (max-width: 900px) {
-
-    .menu-container,
-    .features {
-        grid-template-columns: 1fr 1fr;
-    }
-
 }
 
 
@@ -407,7 +392,7 @@ footer {
     }
 
     nav {
-        flex-direction: row;
+        position: relative;
     }
 
     .menu-toggle {
@@ -419,27 +404,38 @@ footer {
 
         position: absolute;
 
-        top: 50px;
+        top: 55px;
+
         right: 0;
 
-        width: 190px;
-
-        background: #2b211b;
+        width: 200px;
 
         padding: 20px;
+
+        background: #2b211b;
 
         border-radius: 12px;
 
         flex-direction: column;
 
-        gap: 15px;
+        align-items: flex-start;
+
+        gap: 16px;
 
         box-shadow:
-            0 10px 25px rgba(0, 0, 0, 0.25);
+            0 10px 30px rgba(0, 0, 0, 0.3);
     }
 
     .nav-links.active {
         display: flex;
+    }
+
+    .nav-links a {
+        display: block;
+
+        width: 100%;
+
+        padding: 5px 0;
     }
 
     .hero {
@@ -462,15 +458,17 @@ footer {
         font-size: 34px;
     }
 
-    .menu-container,
+    .menu-container {
+        grid-template-columns: 1fr;
+    }
+
     .features {
         grid-template-columns: 1fr;
     }
 
-    .image-container {
-        height: 220px;
+    .menu-card img {
+        height: 230px;
     }
-
 }
 
 
@@ -484,6 +482,10 @@ footer {
         font-size: 20px;
     }
 
+    .menu-toggle {
+        font-size: 27px;
+    }
+
     .hero h2 {
         font-size: 40px;
     }
@@ -491,5 +493,4 @@ footer {
     .hero-description {
         font-size: 14px;
     }
-
 }
