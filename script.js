@@ -1,17 +1,22 @@
-/* =========================
-   MOBILE MENU
-========================= */
+// =========================
+// MOBILE NAVIGATION
+// =========================
 
 const menuToggle = document.querySelector(".menu-toggle");
 
 const navLinks = document.querySelector(".nav-links");
 
 
-menuToggle.addEventListener("click", () => {
+// Open / close menu
+menuToggle.addEventListener("click", function () {
 
     navLinks.classList.toggle("active");
 
-    if (navLinks.classList.contains("active")) {
+    const isOpen = navLinks.classList.contains("active");
+
+    menuToggle.setAttribute("aria-expanded", isOpen);
+
+    if (isOpen) {
 
         menuToggle.textContent = "✕";
 
@@ -24,55 +29,61 @@ menuToggle.addEventListener("click", () => {
 });
 
 
-/* CLOSE MENU AFTER CLICKING A LINK */
+// =========================
+// CLOSE MENU AFTER CLICK
+// =========================
 
-const links = document.querySelectorAll(".nav-links a");
+const navigationLinks =
+    document.querySelectorAll(".nav-links a");
 
 
-links.forEach(link => {
+navigationLinks.forEach(function (link) {
 
-    link.addEventListener("click", () => {
+    link.addEventListener("click", function () {
 
         navLinks.classList.remove("active");
 
         menuToggle.textContent = "☰";
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+        );
 
     });
 
 });
 
 
-/* =========================
-   SCROLL REVEAL ANIMATION
-========================= */
+// =========================
+// CLOSE MENU WHEN CLICKING
+// OUTSIDE THE MENU
+// =========================
 
-const revealElements =
-    document.querySelectorAll(".reveal");
+document.addEventListener("click", function (event) {
 
+    const clickedInsideMenu =
+        navLinks.contains(event.target);
 
-const revealObserver =
-    new IntersectionObserver(
-        (entries) => {
-
-            entries.forEach(entry => {
-
-                if (entry.isIntersecting) {
-
-                    entry.target.classList.add("show");
-
-                }
-
-            });
-
-        },
-        {
-            threshold: 0.15
-        }
-    );
+    const clickedButton =
+        menuToggle.contains(event.target);
 
 
-revealElements.forEach(element => {
+    if (
+        !clickedInsideMenu &&
+        !clickedButton &&
+        navLinks.classList.contains("active")
+    ) {
 
-    revealObserver.observe(element);
+        navLinks.classList.remove("active");
+
+        menuToggle.textContent = "☰";
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+    }
 
 });
