@@ -1,68 +1,54 @@
-document.addEventListener("DOMContentLoaded", function () {
-
-    const menuToggle = document.getElementById("menuToggle");
-    const navLinks = document.getElementById("navLinks");
-
-    if (menuToggle && navLinks) {
-
-        menuToggle.addEventListener("click", function () {
-
-            navLinks.classList.toggle("active");
-
-            const isOpen =
-                navLinks.classList.contains("active");
-
-            menuToggle.setAttribute(
-                "aria-expanded",
-                isOpen
-            );
-
-        });
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
 
 
-        /* Close menu after clicking a link */
+menuToggle.addEventListener("click", function () {
 
-        const links =
-            navLinks.querySelectorAll("a");
+    navLinks.classList.toggle("active");
 
-        links.forEach(function (link) {
+    const isOpen = navLinks.classList.contains("active");
 
-            link.addEventListener("click", function () {
+    menuToggle.setAttribute(
+        "aria-expanded",
+        isOpen
+    );
 
-                navLinks.classList.remove("active");
-
-                menuToggle.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
-            });
-
-        });
-
-    }
+});
 
 
-    /* Close menu if user clicks outside */
+const navItems = navLinks.querySelectorAll("a");
 
-    document.addEventListener("click", function (event) {
 
-        if (
-            navLinks &&
-            menuToggle &&
-            !navLinks.contains(event.target) &&
-            !menuToggle.contains(event.target)
-        ) {
+navItems.forEach(function (item) {
 
-            navLinks.classList.remove("active");
+    item.addEventListener("click", function () {
 
-            menuToggle.setAttribute(
-                "aria-expanded",
-                "false"
-            );
+        navLinks.classList.remove("active");
 
-        }
+        menuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+        );
 
     });
+
+});
+
+
+document.addEventListener("click", function (event) {
+
+    if (
+        !navLinks.contains(event.target) &&
+        !menuToggle.contains(event.target)
+    ) {
+
+        navLinks.classList.remove("active");
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+    }
 
 });
