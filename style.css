@@ -1,3 +1,7 @@
+/* ==============================
+   RESET
+============================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -9,55 +13,72 @@ html {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background: #f8f3ed;
     color: #2b211b;
     line-height: 1.6;
 }
 
 
-/* =========================
+/* ==============================
    HEADER
-========================= */
+============================== */
 
 header {
-    background: #2b211b;
-    padding: 18px 7%;
     position: sticky;
     top: 0;
     z-index: 1000;
+
+    background: rgba(43, 33, 27, 0.97);
+
+    padding: 17px 7%;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.12);
 }
 
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     max-width: 1200px;
+
     margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
 }
 
 .logo {
     color: #f5d6a6;
-    font-size: 24px;
+
+    font-size: 23px;
+
     font-weight: bold;
+
+    text-decoration: none;
 }
 
 
-/* =========================
-   DESKTOP NAVIGATION
-========================= */
+/* ==============================
+   NAV LINKS
+============================== */
 
 .nav-links {
     display: flex;
+
     align-items: center;
+
     gap: 28px;
 }
 
 .nav-links a {
     color: white;
+
     text-decoration: none;
+
     font-size: 14px;
-    transition: color 0.3s ease;
+
+    transition: 0.3s;
 }
 
 .nav-links a:hover {
@@ -65,70 +86,76 @@ nav {
 }
 
 
-/* =========================
-   HAMBURGER BUTTON
-========================= */
+/* ==============================
+   HAMBURGER
+============================== */
 
 .menu-toggle {
     display: none;
 
-    background: none;
     border: none;
+
+    background: transparent;
 
     color: white;
 
-    font-size: 30px;
+    font-size: 28px;
 
     cursor: pointer;
 
-    padding: 5px;
+    line-height: 1;
 }
 
 
-/* =========================
+/* ==============================
    HERO
-========================= */
+============================== */
 
 .hero {
     min-height: 88vh;
 
     display: flex;
+
     align-items: center;
 
     padding: 80px 7%;
 
     background:
         linear-gradient(
-            rgba(43, 33, 27, 0.72),
-            rgba(43, 33, 27, 0.72)
+            rgba(43, 33, 27, 0.74),
+            rgba(43, 33, 27, 0.74)
         ),
         url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1800&q=85")
         center / cover no-repeat;
 }
 
 .hero-content {
-    max-width: 680px;
+    max-width: 700px;
 }
 
 .tagline,
 .section-label {
     color: #a66a3f;
-    font-size: 13px;
+
+    font-size: 12px;
+
     font-weight: bold;
+
     letter-spacing: 3px;
-    margin-bottom: 15px;
+
+    margin-bottom: 16px;
 }
 
 .hero .tagline {
     color: #f5d6a6;
 }
 
-.hero h2 {
+.hero h1 {
     color: white;
 
-    font-size: clamp(45px, 8vw, 80px);
+    font-size: clamp(48px, 8vw, 82px);
 
-    line-height: 1.05;
+    line-height: 1.03;
 
     margin-bottom: 25px;
 }
@@ -138,13 +165,15 @@ nav {
 
     max-width: 520px;
 
+    font-size: 16px;
+
     margin-bottom: 30px;
 }
 
 
-/* =========================
+/* ==============================
    BUTTON
-========================= */
+============================== */
 
 .button {
     display: inline-block;
@@ -153,13 +182,15 @@ nav {
 
     color: white;
 
-    padding: 13px 25px;
-
     text-decoration: none;
+
+    padding: 13px 25px;
 
     border-radius: 30px;
 
-    transition: all 0.3s ease;
+    font-size: 14px;
+
+    transition: 0.3s;
 }
 
 .button:hover {
@@ -169,9 +200,9 @@ nav {
 }
 
 
-/* =========================
-   GENERAL SECTIONS
-========================= */
+/* ==============================
+   SECTIONS
+============================== */
 
 section {
     padding: 100px 7%;
@@ -179,13 +210,16 @@ section {
 
 section h2 {
     font-size: 42px;
+
+    line-height: 1.2;
+
     margin-bottom: 20px;
 }
 
 
-/* =========================
+/* ==============================
    ABOUT
-========================= */
+============================== */
 
 .about {
     max-width: 850px;
@@ -195,14 +229,18 @@ section h2 {
     text-align: center;
 }
 
-.about > p:last-child {
+.about-text {
     color: #6b5b50;
+
+    max-width: 650px;
+
+    margin: auto;
 }
 
 
-/* =========================
+/* ==============================
    MENU
-========================= */
+============================== */
 
 .menu {
     background: #efe5d8;
@@ -234,15 +272,16 @@ section h2 {
     box-shadow:
         0 8px 25px rgba(0, 0, 0, 0.08);
 
-    transition: transform 0.3s ease,
-                box-shadow 0.3s ease;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .menu-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-7px);
 
     box-shadow:
-        0 18px 35px rgba(0, 0, 0, 0.15);
+        0 18px 35px rgba(0, 0, 0, 0.14);
 }
 
 .menu-card img {
@@ -254,11 +293,11 @@ section h2 {
 
     object-fit: cover;
 
-    transition: transform 0.5s ease;
+    transition: 0.4s;
 }
 
 .menu-card:hover img {
-    transform: scale(1.06);
+    transform: scale(1.04);
 }
 
 .menu-card-content {
@@ -268,23 +307,25 @@ section h2 {
 .menu-category {
     color: #a66a3f;
 
-    font-size: 11px;
+    font-size: 10px;
 
     font-weight: bold;
 
     letter-spacing: 2px;
 
-    margin-bottom: 8px;
+    margin-bottom: 7px;
 }
 
 .menu-card h3 {
-    font-size: 21px;
+    font-size: 20px;
 
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .menu-card-content > p:not(.menu-category) {
     color: #76675e;
+
+    font-size: 14px;
 
     margin-bottom: 15px;
 }
@@ -292,13 +333,13 @@ section h2 {
 .menu-card strong {
     color: #a66a3f;
 
-    font-size: 20px;
+    font-size: 19px;
 }
 
 
-/* =========================
+/* ==============================
    WHY AURELIA
-========================= */
+============================== */
 
 .why-us {
     text-align: center;
@@ -319,31 +360,37 @@ section h2 {
 .feature {
     padding: 30px;
 
-    transition: transform 0.3s ease;
+    border-radius: 18px;
+
+    transition: 0.3s;
 }
 
 .feature:hover {
-    transform: translateY(-6px);
+    background: #fffaf5;
+
+    transform: translateY(-5px);
 }
 
 .feature-icon {
-    font-size: 40px;
+    font-size: 38px;
 
     margin-bottom: 10px;
 }
 
 .feature h3 {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .feature p {
     color: #76675e;
+
+    font-size: 14px;
 }
 
 
-/* =========================
+/* ==============================
    CONTACT
-========================= */
+============================== */
 
 .contact {
     background: #2b211b;
@@ -357,16 +404,20 @@ section h2 {
     color: #f5d6a6;
 }
 
-.contact > p:not(.section-label) {
+.contact h2 {
+    color: white;
+}
+
+.contact-info {
     color: #dddddd;
 
     margin-bottom: 30px;
 }
 
 
-/* =========================
+/* ==============================
    FOOTER
-========================= */
+============================== */
 
 footer {
     background: #1d1612;
@@ -375,28 +426,37 @@ footer {
 
     text-align: center;
 
-    padding: 25px 7%;
+    padding: 23px 7%;
 
-    font-size: 13px;
+    font-size: 12px;
 }
 
 
-/* =========================
+/* ==============================
    MOBILE
-========================= */
+============================== */
 
 @media (max-width: 768px) {
 
     header {
-        padding: 16px 7%;
+        padding: 15px 6%;
     }
 
-    nav {
-        position: relative;
+    .logo {
+        font-size: 20px;
     }
 
     .menu-toggle {
         display: block;
+
+        width: 42px;
+        height: 42px;
+
+        border-radius: 50%;
+
+        background: rgba(255, 255, 255, 0.08);
+
+        font-size: 23px;
     }
 
     .nav-links {
@@ -404,26 +464,26 @@ footer {
 
         position: absolute;
 
-        top: 55px;
+        top: 70px;
 
-        right: 0;
+        right: 6%;
 
-        width: 200px;
+        width: 190px;
 
-        padding: 20px;
+        padding: 18px;
 
         background: #2b211b;
 
-        border-radius: 12px;
+        border-radius: 14px;
 
         flex-direction: column;
 
-        align-items: flex-start;
+        align-items: stretch;
 
-        gap: 16px;
+        gap: 5px;
 
         box-shadow:
-            0 10px 30px rgba(0, 0, 0, 0.3);
+            0 12px 30px rgba(0, 0, 0, 0.35);
     }
 
     .nav-links.active {
@@ -431,66 +491,107 @@ footer {
     }
 
     .nav-links a {
-        display: block;
+        padding: 12px 10px;
 
-        width: 100%;
+        border-radius: 8px;
 
-        padding: 5px 0;
+        font-size: 14px;
     }
+
+    .nav-links a:hover {
+        background: rgba(245, 214, 166, 0.1);
+    }
+
+
+    /* HERO */
 
     .hero {
-        min-height: 78vh;
+        min-height: 80vh;
 
-        padding: 60px 7%;
-
-        background-attachment: scroll;
+        padding: 70px 7%;
     }
 
-    .hero h2 {
+    .hero h1 {
         font-size: 48px;
     }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+
+    /* SECTIONS */
 
     section {
         padding: 75px 7%;
     }
 
     section h2 {
-        font-size: 34px;
+        font-size: 32px;
     }
+
+
+    /* MENU */
 
     .menu-container {
         grid-template-columns: 1fr;
-    }
 
-    .features {
-        grid-template-columns: 1fr;
+        gap: 22px;
+
+        margin-top: 35px;
     }
 
     .menu-card img {
-        height: 230px;
+        height: 215px;
     }
+
+    .menu-card-content {
+        padding: 20px;
+    }
+
+
+    /* FEATURES */
+
+    .features {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        margin-top: 30px;
+    }
+
+    .feature {
+        padding: 25px;
+    }
+
 }
 
 
-/* =========================
+/* ==============================
    SMALL PHONES
-========================= */
+============================== */
 
 @media (max-width: 400px) {
 
-    .logo {
-        font-size: 20px;
+    .hero {
+        min-height: 76vh;
+
+        padding: 60px 7%;
     }
 
-    .menu-toggle {
-        font-size: 27px;
-    }
-
-    .hero h2 {
-        font-size: 40px;
+    .hero h1 {
+        font-size: 41px;
     }
 
     .hero-description {
-        font-size: 14px;
+        font-size: 13px;
+    }
+
+    section h2 {
+        font-size: 30px;
+    }
+
+    .menu-card img {
+        height: 205px;
     }
 }
