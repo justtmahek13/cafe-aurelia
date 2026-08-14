@@ -3,23 +3,36 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Café Aurelia | Coffee & Moments</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Café Aurelia - Coffee, food and beautiful moments.">
+
+    <title>Café Aurelia</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
+    <!-- ================= HEADER ================= -->
+
     <header class="header">
 
         <nav class="navbar">
 
-            <a href="#home" class="logo">Café Aurelia</a>
+            <a href="#home" class="logo">
+                Café Aurelia
+            </a>
 
-            <button class="menu-toggle" id="menuToggle">
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
                 ☰
             </button>
 
@@ -40,7 +53,8 @@
 
     <main>
 
-        <!-- HERO -->
+        <!-- ================= HERO ================= -->
+
         <section class="hero" id="home">
 
             <div class="hero-content">
@@ -50,13 +64,14 @@
                 </p>
 
                 <h1>
-                    Where Every Cup<br>
+                    Where Every Cup
+                    <br>
                     Tells a Story.
                 </h1>
 
                 <p class="hero-text">
-                    Freshly brewed coffee, delicious food and a cozy
-                    atmosphere made for good moments.
+                    Freshly brewed coffee, delicious food
+                    and a cozy atmosphere made for good moments.
                 </p>
 
                 <a href="#menu" class="button">
@@ -68,17 +83,19 @@
         </section>
 
 
-        <!-- ABOUT -->
+        <!-- ================= ABOUT ================= -->
+
         <section class="about" id="about">
 
             <div class="about-image">
 
                 <img
-                    src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80"
-                    alt="Café Aurelia interior"
+                    src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=85"
+                    alt="Interior of Café Aurelia"
                 >
 
             </div>
+
 
             <div class="about-content">
 
@@ -91,14 +108,16 @@
                 </h2>
 
                 <p>
-                    Café Aurelia is a warm and welcoming café where
-                    quality coffee meets freshly prepared food.
+                    Café Aurelia is a warm and welcoming café
+                    where quality coffee meets freshly prepared food.
+                    We believe that the best moments are often
+                    shared over a good cup of coffee.
                 </p>
 
                 <p>
-                    Whether you're catching up with friends, enjoying
-                    some quiet time or simply craving a great cup of
-                    coffee, Aurelia is made for you.
+                    Whether you're catching up with friends,
+                    enjoying some quiet time or simply craving
+                    a great cup of coffee, Aurelia is made for you.
                 </p>
 
             </div>
@@ -106,7 +125,8 @@
         </section>
 
 
-        <!-- MENU -->
+        <!-- ================= MENU ================= -->
+
         <section class="menu" id="menu">
 
             <div class="section-heading">
@@ -125,11 +145,12 @@
             <div class="menu-container">
 
 
-                <!-- CARD 1 -->
-                <div class="menu-card">
+                <!-- CAPPUCCINO -->
+
+                <article class="menu-card">
 
                     <img
-                        src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80"
+                        src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=85"
                         alt="Classic Cappuccino"
                     >
 
@@ -144,7 +165,8 @@
                         </h3>
 
                         <p>
-                            Rich espresso with creamy steamed milk.
+                            Rich espresso with creamy
+                            steamed milk.
                         </p>
 
                         <strong>
@@ -153,14 +175,15 @@
 
                     </div>
 
-                </div>
+                </article>
 
 
-                <!-- CARD 2 -->
-                <div class="menu-card">
+                <!-- HAZELNUT LATTE -->
+
+                <article class="menu-card">
 
                     <img
-                        src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80"
+                        src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=85"
                         alt="Hazelnut Latte"
                     >
 
@@ -175,7 +198,8 @@
                         </h3>
 
                         <p>
-                            Smooth latte with a delicious hazelnut touch.
+                            Smooth latte with a delicious
+                            hazelnut touch.
                         </p>
 
                         <strong>
@@ -184,14 +208,15 @@
 
                     </div>
 
-                </div>
+                </article>
 
 
-                <!-- CARD 3 -->
-                <div class="menu-card">
+                <!-- CHOCOLATE CAKE -->
+
+                <article class="menu-card">
 
                     <img
-                        src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80"
+                        src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=85"
                         alt="Chocolate Cake"
                     >
 
@@ -206,7 +231,8 @@
                         </h3>
 
                         <p>
-                            Soft chocolate cake served fresh.
+                            Soft chocolate cake
+                            served fresh.
                         </p>
 
                         <strong>
@@ -215,31 +241,37 @@
 
                     </div>
 
-                </div>
+                </article>
 
             </div>
 
         </section>
 
 
-        <!-- WHY US -->
+        <!-- ================= WHY US ================= -->
+
         <section class="why-us" id="why">
 
-            <p class="section-label">
-                WHY AURELIA
-            </p>
+            <div class="section-heading">
 
-            <h2>
-                Made with care.
-            </h2>
+                <p class="section-label">
+                    WHY AURELIA
+                </p>
+
+                <h2>
+                    Made with care.
+                </h2>
+
+            </div>
 
 
             <div class="features">
 
+
                 <div class="feature">
 
-                    <div class="feature-icon">
-                        ☕
+                    <div class="feature-number">
+                        01
                     </div>
 
                     <h3>
@@ -247,7 +279,8 @@
                     </h3>
 
                     <p>
-                        Freshly brewed for every customer.
+                        Freshly brewed for every customer
+                        using carefully selected coffee beans.
                     </p>
 
                 </div>
@@ -255,8 +288,8 @@
 
                 <div class="feature">
 
-                    <div class="feature-icon">
-                        🍰
+                    <div class="feature-number">
+                        02
                     </div>
 
                     <h3>
@@ -264,7 +297,8 @@
                     </h3>
 
                     <p>
-                        Prepared with quality ingredients.
+                        Prepared with quality ingredients
+                        and served fresh throughout the day.
                     </p>
 
                 </div>
@@ -272,8 +306,8 @@
 
                 <div class="feature">
 
-                    <div class="feature-icon">
-                        ✨
+                    <div class="feature-number">
+                        03
                     </div>
 
                     <h3>
@@ -281,7 +315,8 @@
                     </h3>
 
                     <p>
-                        A comfortable place to relax and connect.
+                        A comfortable place to relax,
+                        connect and enjoy your coffee.
                     </p>
 
                 </div>
@@ -291,45 +326,55 @@
         </section>
 
 
-        <!-- CONTACT -->
+        <!-- ================= CONTACT ================= -->
+
         <section class="contact" id="contact">
 
-            <p class="section-label">
-                VISIT US
-            </p>
+            <div class="contact-content">
 
-            <h2>
-                Let's grab a coffee.
-            </h2>
-
-            <div class="contact-info">
-
-                <p>
-                    📍 Main Street, Maharashtra
+                <p class="section-label">
+                    VISIT US
                 </p>
 
-                <p>
-                    🕒 Mon–Sun: 9:00 AM – 10:00 PM
-                </p>
+                <h2>
+                    Let's grab a coffee.
+                </h2>
 
-            </div>
+                <div class="contact-info">
+
+                    <p>
+                        Main Street, Maharashtra
+                    </p>
+
+                    <p>
+                        Mon–Sun: 9:00 AM – 10:00 PM
+                    </p>
+
+                </div>
 
 
-            <div class="contact-buttons">
+                <div class="contact-buttons">
 
-                <a
-                    href="mailto:yourmail@gmail.com"
-                    class="button"
-                >
-                    Email Us
-                </a>
+                    <!-- CHANGE THIS EMAIL -->
 
-                <a
-                    href="tel:+919999999999"
-                    class="button"
-                >
-                    Call Us
-                </a>
+                    <a
+                        href="mailto:yourmail@gmail.com"
+                        class="button"
+                    >
+                        Email Us
+                    </a>
+
+
+                    <!-- CHANGE THIS NUMBER -->
+
+                    <a
+                        href="tel:+919999999999"
+                        class="button"
+                    >
+                        Call Us
+                    </a>
+
+                </div>
 
             </div>
 
@@ -338,8 +383,9 @@
     </main>
 
 
-    <!-- FOOTER -->
-    <footer>
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
 
         <p>
             © 2026 Café Aurelia. All rights reserved.
