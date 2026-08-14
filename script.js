@@ -1,66 +1,24 @@
-document.addEventListener("DOMContentLoaded", function () {
-
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
-    const navItems = document.querySelectorAll(".nav-links a");
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
 
 
-    /* =========================
-       MOBILE MENU
-    ========================= */
+// Open / close mobile menu
+menuToggle.addEventListener("click", function () {
 
-    menuToggle.addEventListener("click", function () {
+    navLinks.classList.toggle("active");
 
-        navLinks.classList.toggle("active");
+});
 
-        if (navLinks.classList.contains("active")) {
 
-            menuToggle.textContent = "✕";
+// Close menu when a link is clicked
+const links = document.querySelectorAll(".nav-links a");
 
-        } else {
+links.forEach(function (link) {
 
-            menuToggle.textContent = "☰";
+    link.addEventListener("click", function () {
 
-        }
+        navLinks.classList.remove("active");
 
     });
-
-
-    /* =========================
-       CLOSE MENU AFTER CLICK
-    ========================= */
-
-    navItems.forEach(function (item) {
-
-        item.addEventListener("click", function () {
-
-            navLinks.classList.remove("active");
-
-            menuToggle.textContent = "☰";
-
-        });
-
-    });
-
-
-    /* =========================
-       CLOSE MENU OUTSIDE
-    ========================= */
-
-    document.addEventListener("click", function (event) {
-
-        if (
-            !navLinks.contains(event.target) &&
-            !menuToggle.contains(event.target)
-        ) {
-
-            navLinks.classList.remove("active");
-
-            menuToggle.textContent = "☰";
-
-        }
-
-    });
-
 
 });
