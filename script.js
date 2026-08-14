@@ -2,53 +2,25 @@ const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
 
 
+// Open / close mobile navigation
+
 menuToggle.addEventListener("click", function () {
 
     navLinks.classList.toggle("active");
 
-    const isOpen = navLinks.classList.contains("active");
-
-    menuToggle.setAttribute(
-        "aria-expanded",
-        isOpen
-    );
-
 });
 
 
-const navItems = navLinks.querySelectorAll("a");
+// Close navigation after clicking a link
 
+const navigationLinks = document.querySelectorAll(".nav-links a");
 
-navItems.forEach(function (item) {
+navigationLinks.forEach(function (link) {
 
-    item.addEventListener("click", function () {
+    link.addEventListener("click", function () {
 
         navLinks.classList.remove("active");
-
-        menuToggle.setAttribute(
-            "aria-expanded",
-            "false"
-        );
 
     });
-
-});
-
-
-document.addEventListener("click", function (event) {
-
-    if (
-        !navLinks.contains(event.target) &&
-        !menuToggle.contains(event.target)
-    ) {
-
-        navLinks.classList.remove("active");
-
-        menuToggle.setAttribute(
-            "aria-expanded",
-            "false"
-        );
-
-    }
 
 });
