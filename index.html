@@ -5,25 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Café Aurelia</title>
+    <meta name="description"
+        content="Café Aurelia - Fresh coffee, delicious food and cozy moments.">
+
+    <title>Café Aurelia | Coffee • Food • Moments</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- ================= NAVIGATION ================= -->
+    <!-- ================= HEADER ================= -->
 
     <header>
 
         <nav>
 
-            <h1 class="logo">Café Aurelia</h1>
+            <a href="#home" class="logo">
+                Café Aurelia
+            </a>
 
-            <!-- Mobile Menu Button -->
             <button
                 class="menu-toggle"
-                aria-label="Open navigation menu"
+                aria-label="Open navigation"
                 aria-expanded="false"
             >
                 ☰
@@ -48,10 +52,9 @@
 
     <main>
 
-
         <!-- ================= HERO ================= -->
 
-        <section class="hero">
+        <section class="hero" id="home">
 
             <div class="hero-content">
 
@@ -59,10 +62,11 @@
                     COFFEE • FOOD • MOMENTS
                 </p>
 
-                <h2>
-                    Where Every Cup<br>
+                <h1>
+                    Where Every Cup
+                    <br>
                     Tells a Story.
-                </h2>
+                </h1>
 
                 <p class="hero-description">
                     Freshly brewed coffee, delicious food and a cozy
@@ -90,7 +94,7 @@
                 A little place for big moments.
             </h2>
 
-            <p>
+            <p class="about-text">
                 Café Aurelia is a warm and welcoming café where
                 quality coffee meets freshly prepared food.
                 Come in, slow down and enjoy the moment.
@@ -111,17 +115,17 @@
                 Customer Favorites
             </h2>
 
-
             <div class="menu-container">
 
 
                 <!-- CAPPUCCINO -->
 
-                <div class="menu-card">
+                <article class="menu-card">
 
                     <img
-                        src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80"
+                        src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=85"
                         alt="Classic Cappuccino"
+                        loading="lazy"
                     >
 
                     <div class="menu-card-content">
@@ -144,16 +148,17 @@
 
                     </div>
 
-                </div>
+                </article>
 
 
                 <!-- HAZELNUT LATTE -->
 
-                <div class="menu-card">
+                <article class="menu-card">
 
                     <img
-                        src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80"
+                        src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=85"
                         alt="Hazelnut Latte"
+                        loading="lazy"
                     >
 
                     <div class="menu-card-content">
@@ -176,16 +181,17 @@
 
                     </div>
 
-                </div>
+                </article>
 
 
                 <!-- CHOCOLATE CAKE -->
 
-                <div class="menu-card">
+                <article class="menu-card">
 
                     <img
-                        src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80"
+                        src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=85"
                         alt="Chocolate Cake"
+                        loading="lazy"
                     >
 
                     <div class="menu-card-content">
@@ -208,8 +214,7 @@
 
                     </div>
 
-                </div>
-
+                </article>
 
             </div>
 
@@ -227,7 +232,6 @@
             <h2>
                 Made with care.
             </h2>
-
 
             <div class="features">
 
@@ -282,7 +286,6 @@
 
                 </div>
 
-
             </div>
 
         </section>
@@ -300,7 +303,7 @@
                 Let's grab a coffee.
             </h2>
 
-            <p>
+            <p class="contact-info">
                 📍 Main Street, Maharashtra
                 <br>
                 🕒 Mon–Sun: 9:00 AM – 10:00 PM
@@ -315,7 +318,6 @@
 
         </section>
 
-
     </main>
 
 
@@ -329,8 +331,6 @@
 
     </footer>
 
-
-    <!-- ================= JAVASCRIPT ================= -->
 
     <script src="script.js"></script>
 
