@@ -1,49 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Café Aurelia</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- ================= NAVIGATION ================= -->
+
     <header>
+
         <nav>
-            <h1>Café Aurelia</h1>
+
+            <h1 class="logo">Café Aurelia</h1>
+
+            <!-- Mobile Menu Button -->
+            <button
+                class="menu-toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
 
             <div class="nav-links">
+
                 <a href="#about">About</a>
+
                 <a href="#menu">Menu</a>
+
+                <a href="#why">Why Us</a>
+
                 <a href="#contact">Contact</a>
+
             </div>
+
         </nav>
+
     </header>
+
 
     <main>
 
+
+        <!-- ================= HERO ================= -->
+
         <section class="hero">
-            <div>
-                <p class="tagline">COFFEE • FOOD • MOMENTS</p>
 
-                <h2>Where Every Cup<br>Tells a Story.</h2>
+            <div class="hero-content">
 
-                <p>
+                <p class="tagline">
+                    COFFEE • FOOD • MOMENTS
+                </p>
+
+                <h2>
+                    Where Every Cup<br>
+                    Tells a Story.
+                </h2>
+
+                <p class="hero-description">
                     Freshly brewed coffee, delicious food and a cozy
                     atmosphere made for good moments.
                 </p>
 
-                <a href="#menu" class="button">View Our Menu</a>
+                <a href="#menu" class="button">
+                    View Our Menu
+                </a>
+
             </div>
+
         </section>
 
 
+        <!-- ================= ABOUT ================= -->
+
         <section id="about" class="about">
 
-            <p class="section-label">OUR STORY</p>
+            <p class="section-label">
+                OUR STORY
+            </p>
 
-            <h2>A little place for big moments.</h2>
+            <h2>
+                A little place for big moments.
+            </h2>
 
             <p>
                 Café Aurelia is a warm and welcoming café where
@@ -54,11 +99,18 @@
         </section>
 
 
+        <!-- ================= MENU ================= -->
+
         <section id="menu" class="menu">
 
-            <p class="section-label">OUR MENU</p>
+            <p class="section-label">
+                OUR MENU
+            </p>
 
-            <h2>Customer Favorites</h2>
+            <h2>
+                Customer Favorites
+            </h2>
+
 
             <div class="menu-container">
 
@@ -72,13 +124,25 @@
                         alt="Classic Cappuccino"
                     >
 
-                    <h3>Classic Cappuccino</h3>
+                    <div class="menu-card-content">
 
-                    <p>
-                        Rich espresso with creamy steamed milk.
-                    </p>
+                        <p class="menu-category">
+                            COFFEE
+                        </p>
 
-                    <strong>₹180</strong>
+                        <h3>
+                            Classic Cappuccino
+                        </h3>
+
+                        <p>
+                            Rich espresso with creamy steamed milk.
+                        </p>
+
+                        <strong>
+                            ₹180
+                        </strong>
+
+                    </div>
 
                 </div>
 
@@ -92,13 +156,25 @@
                         alt="Hazelnut Latte"
                     >
 
-                    <h3>Hazelnut Latte</h3>
+                    <div class="menu-card-content">
 
-                    <p>
-                        Smooth latte with a delicious hazelnut touch.
-                    </p>
+                        <p class="menu-category">
+                            COFFEE
+                        </p>
 
-                    <strong>₹210</strong>
+                        <h3>
+                            Hazelnut Latte
+                        </h3>
+
+                        <p>
+                            Smooth latte with a delicious hazelnut touch.
+                        </p>
+
+                        <strong>
+                            ₹210
+                        </strong>
+
+                    </div>
 
                 </div>
 
@@ -112,13 +188,25 @@
                         alt="Chocolate Cake"
                     >
 
-                    <h3>Chocolate Cake</h3>
+                    <div class="menu-card-content">
 
-                    <p>
-                        Soft chocolate cake served fresh.
-                    </p>
+                        <p class="menu-category">
+                            DESSERT
+                        </p>
 
-                    <strong>₹160</strong>
+                        <h3>
+                            Chocolate Cake
+                        </h3>
+
+                        <p>
+                            Soft chocolate cake served fresh.
+                        </p>
+
+                        <strong>
+                            ₹160
+                        </strong>
+
+                    </div>
 
                 </div>
 
@@ -128,48 +216,93 @@
         </section>
 
 
-        <section class="why-us">
+        <!-- ================= WHY AURELIA ================= -->
 
-            <p class="section-label">WHY AURELIA</p>
+        <section id="why" class="why-us">
 
-            <h2>Made with care.</h2>
+            <p class="section-label">
+                WHY AURELIA
+            </p>
+
+            <h2>
+                Made with care.
+            </h2>
+
 
             <div class="features">
 
-                <div>
-                    <h3>☕ Fresh Coffee</h3>
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        ☕
+                    </div>
+
+                    <h3>
+                        Fresh Coffee
+                    </h3>
+
                     <p>
                         Freshly brewed for every customer.
                     </p>
+
                 </div>
 
-                <div>
-                    <h3>🍰 Fresh Food</h3>
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        🍰
+                    </div>
+
+                    <h3>
+                        Fresh Food
+                    </h3>
+
                     <p>
                         Prepared with quality ingredients.
                     </p>
+
                 </div>
 
-                <div>
-                    <h3>✨ Cozy Space</h3>
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        ✨
+                    </div>
+
+                    <h3>
+                        Cozy Space
+                    </h3>
+
                     <p>
                         A comfortable place to relax and connect.
                     </p>
+
                 </div>
+
 
             </div>
 
         </section>
 
 
+        <!-- ================= CONTACT ================= -->
+
         <section id="contact" class="contact">
 
-            <p class="section-label">VISIT US</p>
+            <p class="section-label">
+                VISIT US
+            </p>
 
-            <h2>Let's grab a coffee.</h2>
+            <h2>
+                Let's grab a coffee.
+            </h2>
 
             <p>
-                📍 Main Street, Maharashtra<br>
+                📍 Main Street, Maharashtra
+                <br>
                 🕒 Mon–Sun: 9:00 AM – 10:00 PM
             </p>
 
@@ -182,8 +315,11 @@
 
         </section>
 
+
     </main>
 
+
+    <!-- ================= FOOTER ================= -->
 
     <footer>
 
@@ -193,4 +329,11 @@
 
     </footer>
 
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="script.js"></script>
+
 </body>
+
+</html>
