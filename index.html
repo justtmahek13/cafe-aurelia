@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-        content="Café Aurelia - Fresh coffee, delicious food and cozy moments.">
+        content="Café Aurelia — freshly brewed coffee, delicious food and cozy moments.">
 
     <title>Café Aurelia | Coffee • Food • Moments</title>
 
@@ -15,32 +15,24 @@
 
 <body>
 
-    <!-- ================= HEADER ================= -->
+    <!-- NAVBAR -->
+    <header class="header">
 
-    <header>
-
-        <nav>
+        <nav class="navbar">
 
             <a href="#home" class="logo">
                 Café Aurelia
             </a>
 
-            <button
-                class="menu-toggle"
-                aria-label="Open navigation"
-                aria-expanded="false"
-            >
+            <button class="menu-toggle" aria-label="Open navigation">
                 ☰
             </button>
 
             <div class="nav-links">
 
                 <a href="#about">About</a>
-
                 <a href="#menu">Menu</a>
-
                 <a href="#why">Why Us</a>
-
                 <a href="#contact">Contact</a>
 
             </div>
@@ -52,9 +44,8 @@
 
     <main>
 
-        <!-- ================= HERO ================= -->
-
-        <section class="hero" id="home">
+        <!-- HERO -->
+        <section id="home" class="hero">
 
             <div class="hero-content">
 
@@ -63,12 +54,11 @@
                 </p>
 
                 <h1>
-                    Where Every Cup
-                    <br>
+                    Where Every Cup<br>
                     Tells a Story.
                 </h1>
 
-                <p class="hero-description">
+                <p class="hero-text">
                     Freshly brewed coffee, delicious food and a cozy
                     atmosphere made for good moments.
                 </p>
@@ -82,55 +72,74 @@
         </section>
 
 
-        <!-- ================= ABOUT ================= -->
-
+        <!-- ABOUT -->
         <section id="about" class="about">
 
-            <p class="section-label">
-                OUR STORY
-            </p>
+            <div class="about-image">
 
-            <h2>
-                A little place for big moments.
-            </h2>
+                <img
+                    src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1000&q=85"
+                    alt="Cozy Café Aurelia interior"
+                >
 
-            <p class="about-text">
-                Café Aurelia is a warm and welcoming café where
-                quality coffee meets freshly prepared food.
-                Come in, slow down and enjoy the moment.
-            </p>
+            </div>
+
+            <div class="about-content">
+
+                <p class="section-label">
+                    OUR STORY
+                </p>
+
+                <h2>
+                    A little place for big moments.
+                </h2>
+
+                <p>
+                    Café Aurelia is a warm and welcoming café where
+                    quality coffee meets freshly prepared food.
+                </p>
+
+                <p>
+                    Whether you're catching up with friends, enjoying
+                    some quiet time or simply craving a great cup of
+                    coffee, Aurelia is made for you.
+                </p>
+
+            </div>
 
         </section>
 
 
-        <!-- ================= MENU ================= -->
-
+        <!-- MENU -->
         <section id="menu" class="menu">
 
-            <p class="section-label">
-                OUR MENU
-            </p>
+            <div class="section-heading">
 
-            <h2>
-                Customer Favorites
-            </h2>
+                <p class="section-label">
+                    OUR MENU
+                </p>
+
+                <h2>
+                    Customer Favorites
+                </h2>
+
+            </div>
+
 
             <div class="menu-container">
 
 
                 <!-- CAPPUCCINO -->
-
                 <article class="menu-card">
 
                     <img
                         src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=85"
                         alt="Classic Cappuccino"
-                        loading="lazy"
                     >
 
-                    <div class="menu-card-content">
+                    <div class="card-content">
 
-                        <p class="menu-category">
+                        <p class="card-category">
                             COFFEE
                         </p>
 
@@ -152,18 +161,16 @@
 
 
                 <!-- HAZELNUT LATTE -->
-
                 <article class="menu-card">
 
                     <img
                         src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=85"
                         alt="Hazelnut Latte"
-                        loading="lazy"
                     >
 
-                    <div class="menu-card-content">
+                    <div class="card-content">
 
-                        <p class="menu-category">
+                        <p class="card-category">
                             COFFEE
                         </p>
 
@@ -185,18 +192,16 @@
 
 
                 <!-- CHOCOLATE CAKE -->
-
                 <article class="menu-card">
 
                     <img
                         src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=85"
                         alt="Chocolate Cake"
-                        loading="lazy"
                     >
 
-                    <div class="menu-card-content">
+                    <div class="card-content">
 
-                        <p class="menu-category">
+                        <p class="card-category">
                             DESSERT
                         </p>
 
@@ -221,20 +226,23 @@
         </section>
 
 
-        <!-- ================= WHY AURELIA ================= -->
-
+        <!-- WHY US -->
         <section id="why" class="why-us">
 
-            <p class="section-label">
-                WHY AURELIA
-            </p>
+            <div class="section-heading">
 
-            <h2>
-                Made with care.
-            </h2>
+                <p class="section-label">
+                    WHY AURELIA
+                </p>
+
+                <h2>
+                    Made with care.
+                </h2>
+
+            </div>
+
 
             <div class="features">
-
 
                 <div class="feature">
 
@@ -291,42 +299,58 @@
         </section>
 
 
-        <!-- ================= CONTACT ================= -->
-
+        <!-- CONTACT -->
         <section id="contact" class="contact">
 
-            <p class="section-label">
-                VISIT US
-            </p>
+            <div class="contact-content">
 
-            <h2>
-                Let's grab a coffee.
-            </h2>
+                <p class="section-label">
+                    VISIT US
+                </p>
 
-            <p class="contact-info">
-                📍 Main Street, Maharashtra
-                <br>
-                🕒 Mon–Sun: 9:00 AM – 10:00 PM
-            </p>
+                <h2>
+                    Let's grab a coffee.
+                </h2>
 
-            <a
-                href="mailto:hello@cafeaurelia.com"
-                class="button"
-            >
-                Contact Us
-            </a>
+                <div class="contact-details">
+
+                    <p>
+                        📍 Main Street, Maharashtra
+                    </p>
+
+                    <p>
+                        🕒 Mon–Sun: 9:00 AM – 10:00 PM
+                    </p>
+
+                    <p>
+                        ✉️ hello@cafeaurelia.com
+                    </p>
+
+                </div>
+
+                <a
+                    href="mailto:hello@cafeaurelia.com"
+                    class="button contact-button"
+                >
+                    Contact Us
+                </a>
+
+            </div>
 
         </section>
 
     </main>
 
 
-    <!-- ================= FOOTER ================= -->
-
-    <footer>
+    <!-- FOOTER -->
+    <footer class="footer">
 
         <p>
             © 2026 Café Aurelia. All rights reserved.
+        </p>
+
+        <p>
+            Coffee • Food • Moments
         </p>
 
     </footer>
