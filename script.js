@@ -1,78 +1,27 @@
 // ==============================
-// CAFÉ AURELIA NAVIGATION
+// MOBILE NAVIGATION
 // ==============================
 
 const menuToggle = document.querySelector(".menu-toggle");
-
 const navLinks = document.querySelector(".nav-links");
 
 
-// ==============================
-// OPEN / CLOSE MOBILE MENU
-// ==============================
-
-menuToggle.addEventListener("click", function () {
+// Open / close menu
+menuToggle.addEventListener("click", () => {
 
     navLinks.classList.toggle("active");
-
-    const menuIsOpen =
-        navLinks.classList.contains("active");
-
-
-    menuToggle.setAttribute(
-        "aria-expanded",
-        menuIsOpen
-    );
-
-
-    if (menuIsOpen) {
-
-        menuToggle.textContent = "✕";
-
-        menuToggle.setAttribute(
-            "aria-label",
-            "Close navigation"
-        );
-
-    } else {
-
-        menuToggle.textContent = "☰";
-
-        menuToggle.setAttribute(
-            "aria-label",
-            "Open navigation"
-        );
-
-    }
 
 });
 
 
-// ==============================
-// CLOSE MENU AFTER CLICKING LINK
-// ==============================
+// Close menu when a link is clicked
+const links = document.querySelectorAll(".nav-links a");
 
-const navigationLinks =
-    document.querySelectorAll(".nav-links a");
+links.forEach((link) => {
 
-
-navigationLinks.forEach(function (link) {
-
-    link.addEventListener("click", function () {
+    link.addEventListener("click", () => {
 
         navLinks.classList.remove("active");
-
-        menuToggle.textContent = "☰";
-
-        menuToggle.setAttribute(
-            "aria-expanded",
-            "false"
-        );
-
-        menuToggle.setAttribute(
-            "aria-label",
-            "Open navigation"
-        );
 
     });
 
@@ -83,34 +32,17 @@ navigationLinks.forEach(function (link) {
 // CLOSE MENU WHEN CLICKING OUTSIDE
 // ==============================
 
-document.addEventListener("click", function (event) {
+document.addEventListener("click", (event) => {
 
-    const clickedMenu =
+    const clickedInsideMenu =
         navLinks.contains(event.target);
 
     const clickedButton =
         menuToggle.contains(event.target);
 
-
-    if (
-        !clickedMenu &&
-        !clickedButton &&
-        navLinks.classList.contains("active")
-    ) {
+    if (!clickedInsideMenu && !clickedButton) {
 
         navLinks.classList.remove("active");
-
-        menuToggle.textContent = "☰";
-
-        menuToggle.setAttribute(
-            "aria-expanded",
-            "false"
-        );
-
-        menuToggle.setAttribute(
-            "aria-label",
-            "Open navigation"
-        );
 
     }
 
@@ -118,21 +50,22 @@ document.addEventListener("click", function (event) {
 
 
 // ==============================
-// CLOSE MOBILE MENU ON RESIZE
+// SIMPLE SCROLL EFFECT
 // ==============================
 
-window.addEventListener("resize", function () {
+window.addEventListener("scroll", () => {
 
-    if (window.innerWidth > 768) {
+    const header = document.querySelector(".header");
 
-        navLinks.classList.remove("active");
+    if (window.scrollY > 50) {
 
-        menuToggle.textContent = "☰";
+        header.style.background = "rgba(44, 33, 28, 0.96)";
+        header.style.backdropFilter = "blur(10px)";
 
-        menuToggle.setAttribute(
-            "aria-expanded",
-            "false"
-        );
+    } else {
+
+        header.style.background = "transparent";
+        header.style.backdropFilter = "none";
 
     }
 
