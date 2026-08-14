@@ -1,72 +1,66 @@
-// ==============================
-// MOBILE NAVIGATION
-// ==============================
+document.addEventListener("DOMContentLoaded", function () {
 
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
-
-
-// Open / close menu
-menuToggle.addEventListener("click", () => {
-
-    navLinks.classList.toggle("active");
-
-});
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+    const navItems = document.querySelectorAll(".nav-links a");
 
 
-// Close menu when a link is clicked
-const links = document.querySelectorAll(".nav-links a");
+    /* =========================
+       MOBILE MENU
+    ========================= */
 
-links.forEach((link) => {
+    menuToggle.addEventListener("click", function () {
 
-    link.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
 
-        navLinks.classList.remove("active");
+        if (navLinks.classList.contains("active")) {
+
+            menuToggle.textContent = "✕";
+
+        } else {
+
+            menuToggle.textContent = "☰";
+
+        }
 
     });
 
-});
+
+    /* =========================
+       CLOSE MENU AFTER CLICK
+    ========================= */
+
+    navItems.forEach(function (item) {
+
+        item.addEventListener("click", function () {
+
+            navLinks.classList.remove("active");
+
+            menuToggle.textContent = "☰";
+
+        });
+
+    });
 
 
-// ==============================
-// CLOSE MENU WHEN CLICKING OUTSIDE
-// ==============================
+    /* =========================
+       CLOSE MENU OUTSIDE
+    ========================= */
 
-document.addEventListener("click", (event) => {
+    document.addEventListener("click", function (event) {
 
-    const clickedInsideMenu =
-        navLinks.contains(event.target);
+        if (
+            !navLinks.contains(event.target) &&
+            !menuToggle.contains(event.target)
+        ) {
 
-    const clickedButton =
-        menuToggle.contains(event.target);
+            navLinks.classList.remove("active");
 
-    if (!clickedInsideMenu && !clickedButton) {
+            menuToggle.textContent = "☰";
 
-        navLinks.classList.remove("active");
+        }
 
-    }
+    });
 
-});
-
-
-// ==============================
-// SIMPLE SCROLL EFFECT
-// ==============================
-
-window.addEventListener("scroll", () => {
-
-    const header = document.querySelector(".header");
-
-    if (window.scrollY > 50) {
-
-        header.style.background = "rgba(44, 33, 28, 0.96)";
-        header.style.backdropFilter = "blur(10px)";
-
-    } else {
-
-        header.style.background = "transparent";
-        header.style.backdropFilter = "none";
-
-    }
 
 });
